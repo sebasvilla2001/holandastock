@@ -1,0 +1,280 @@
+/* Estilo general del formulario */
+#formulario {
+    padding: 20px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Asegura que los botones se apilen verticalmente */
+    gap: 15px; /* Aumenta el espacio entre los botones */
+}
+
+.button-group .btn {
+    padding: 10px; /* Espaciado interno de los botones */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo de la fila */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    justify-content: center; /* Centra los elementos en la fila */
+}
+
+/* Estilo de cada permiso */
+.permission-item {
+    margin: 15px; /* Espacio entre cada permiso */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #050505 ; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Color de fondo claro */
+    transition: box-shadow 0.3s; /* Transición suave para la sombra */
+}
+
+/* Efecto de sombra al pasar el mouse */
+.permission-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) /* Sombra al pasar el mouse */
+}
+
+/* Estilo de la etiqueta del permiso */
+.permission-label {
+    display: block; /* Hace que la etiqueta ocupe toda la línea */
+    margin-bottom: 10px; /* Espacio entre la etiqueta y el checkbox */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo del checkbox */
+.button-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+/* Estilo del input oculto */
+.button-checkbox input {
+    display: none; /* Oculta el checkbox original */
+}
+
+/* Estilo de la barra del botón */
+.button-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a2a2a2; /* Color de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: background-color 0.3s;
+}
+
+/* Estilo del círculo deslizante */
+.button-slider::before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white; /* Color del círculo */
+    transition: transform 0.3s;
+    border-radius: 50%; /* Círculo */
+}
+
+/* Cambia el color cuando está activado */
+.button-checkbox input:checked + .button-slider {
+    background-color: #e74c3c ; /* Color azul cuando está activado */
+}
+
+/* Mueve el círculo cuando está activado */
+.button-checkbox input:checked + .button-slider::before {
+    transform: translateX(30px); /* Mueve el círculo a la derecha */
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Contenedor principal */
+.content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Estilo del enlace de regreso */
+.pagina {
+    display: inline-block;
+    font-size: 18px;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.pagina:hover {
+    color: #0056b3;
+}
+
+/* Línea separadora */
+hr {
+    border: none;
+    height: 2px;
+    background: #e74c3c;
+    width: 50%;
+    margin: 20px auto;
+}
+
+/* Mensaje de error */
+.tags {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00c5d5;
+}
+
+/* Mensaje descriptivo */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Agregar animación de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/*CSS ACERCA DE*/
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 95%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para el encabezado */
+h2 {
+    color: #ff6f20;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la imagen */
+.image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Caja de información */
+.info-box {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Estilos para la lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.lista {
+    background-color: #e0f7fa;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+/* Estilos para los párrafos */
+p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Separación del mensaje final */
+.footer-message {
+    margin-top: 20px; /* Aumenta el espacio arriba */
+    padding-top: 15px; /* Agrega un poco más de separación */
+    border-top: 1px solid #ddd; /* Línea sutil para mayor separación */
+    text-align: center;
+}
+
+/* DISEÑO DEL BUSCADOR POR FECHAS */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
